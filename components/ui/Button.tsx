@@ -1,7 +1,6 @@
 "use Client";
 import clsx from "clsx";
 import { ReactNode } from "react";
-import { FiMenu, fimenu } from "react-icons/fi";
 
 interface buttonProps {
   type?: "button" | "submit" | "reset";
@@ -17,7 +16,8 @@ const Button = ({ type, text, onClick, actionButton }: buttonProps) => {
         onClick={onClick}
         type={type}
         className={clsx(
-          actionButton && "bg-orange-700 rounded-full p-2 text-white  hover:bg-orange-500",
+          actionButton &&
+            "bg-orange-700 rounded-full p-2 text-white  hover:bg-orange-500",
           "bg-orange-700 px-2 text-white hover:bg-orange-500"
         )}
       >
@@ -25,7 +25,6 @@ const Button = ({ type, text, onClick, actionButton }: buttonProps) => {
       </button>
     </>
   );
-  <FiMenu />;
 };
 
 export default Button;
